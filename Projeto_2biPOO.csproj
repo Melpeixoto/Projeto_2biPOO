@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Images\**" />
+    <EmbeddedResource Remove="Images\**" />
+    <None Remove="Images\**" />
+    <Page Remove="Images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Imagens\agua_gas.jpeg" />
+    <None Remove="Imagens\agua_mineral.jpeg" />
+    <None Remove="Imagens\bife_grelhado.jpeg" />
+    <None Remove="Imagens\coca_cola.jpeg" />
+    <None Remove="Imagens\espaguete.jpeg" />
+    <None Remove="Imagens\frango_assado.jpeg" />
+    <None Remove="Imagens\padrao.jpeg" />
+    <None Remove="Imagens\prato_kids.jpeg" />
+    <None Remove="Imagens\suco_laranja.jpeg" />
+    <None Remove="Imagens\woodpeckers_logo.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Imagens\agua_gas.jpeg" />
+    <Resource Include="Imagens\agua_mineral.jpeg" />
+    <Resource Include="Imagens\bife_grelhado.jpeg" />
+    <Resource Include="Imagens\coca_cola.jpeg" />
+    <Resource Include="Imagens\espaguete.jpeg" />
+    <Resource Include="Imagens\frango_assado.jpeg" />
+    <Resource Include="Imagens\padrao.jpeg" />
+    <Resource Include="Imagens\prato_kids.jpeg" />
+    <Resource Include="Imagens\suco_laranja.jpeg" />
+    <Resource Include="Imagens\woodpeckers_logo.jpeg" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,58 @@
+﻿<Window x:Class="Projeto_2biPOO.NovaConta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projeto_2biPOO"
+        mc:Ignorable="d"
+        Title="Nova Conta" Height="1080" Width="1920" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+    <Viewbox Stretch="Fill">
+        <Grid Width="1920" Height="1080">
+            <Rectangle HorizontalAlignment="Left" Height="1080" VerticalAlignment="Center" Width="639" Fill="#FF9D3535"/>
+            <Rectangle HorizontalAlignment="Center" Height="558" VerticalAlignment="Center" Width="512" RadiusX="10" RadiusY="10" Fill="#FFE5E5E5"/>
+            <Rectangle HorizontalAlignment="Left" Height="558" Margin="1317,0,0,0" VerticalAlignment="Center" Width="512" RadiusX="10" RadiusY="10" Fill="#FFE5E5E5"/>
+            <Button Content="Cancelar Conta" Click="BtnCancelarConta_Click" HorizontalAlignment="Left" Margin="766,925,0,0" VerticalAlignment="Top" Width="450" Height="80" Background="#FF9D3535" Foreground="White" FontSize="40"/>
+            <Button Content="Visualizar Conta" Click="BtnVisualizarConta_Click" HorizontalAlignment="Left" Margin="1317,925,0,0" VerticalAlignment="Top" Width="450" Height="80" Background="#FF9D3535" Foreground="White" FontSize="40"/>
+            <Button Content="&lt;" Click="BtnVoltar_Click" HorizontalAlignment="Left" Margin="1820,0,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF9D3535" Width="100" Height="100" FontSize="42"/>
+            <Label Content="Comidas:" HorizontalAlignment="Left" Margin="704,166,0,0" VerticalAlignment="Top" FontSize="64" Foreground="#FF9D3535"/>
+            <Label Content="Bebidas:" HorizontalAlignment="Left" Margin="1317,166,0,0" VerticalAlignment="Top" FontSize="64" Foreground="#FF9D3535"/>
+            <TextBlock HorizontalAlignment="Left" Margin="39,60,0,0" TextWrapping="Wrap" Text="Nova Conta" VerticalAlignment="Top" FontSize="96" Foreground="White"/>
+
+            <!-- TABELA DE BEBIDAS: ID, Nome, Volume, Gelada e Preço -->
+            <DataGrid x:Name="dgBebidas"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      HeadersVisibility="Column"
+                      FontSize="18"
+                      MouseDoubleClick="DgProduto_MouseDoubleClick"
+                      Width="512" Height="542" Margin="1317,269,91,269">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                    <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*"/>
+                    <DataGridTextColumn Header="Volume" Binding="{Binding VolumeMl, StringFormat='{}{0} ml'}" Width="85"/>
+                    <DataGridCheckBoxColumn Header="Gelada" Binding="{Binding Gelada}" Width="75"/>
+                    <DataGridTextColumn Header="Preço" Binding="{Binding PrecoBase, StringFormat='R$ {0:F2}'}" Width="100"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- TABELA DE COMIDAS: ID, Nome e Preço -->
+            <DataGrid x:Name="dgComidas"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      HeadersVisibility="Column"
+                      FontSize="18"
+                      MouseDoubleClick="DgProduto_MouseDoubleClick"
+                      Width="512" Height="542" Margin="704,269,704,269">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="55"/>
+                    <DataGridTextColumn Header="Nome do Prato" Binding="{Binding Nome}" Width="*"/>
+                    <DataGridTextColumn Header="Preço" Binding="{Binding PrecoBase, StringFormat='R$ {0:F2}'}" Width="110"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <TextBlock HorizontalAlignment="Left" Margin="991,60,0,0" TextWrapping="Wrap" Text="Nosso Cardápio" VerticalAlignment="Top" FontSize="64" Foreground="#FF9D3535"/>
+        </Grid>
+    </Viewbox>
+</Window>

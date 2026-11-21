@@ -1,0 +1,22 @@
+﻿<Window x:Class="Projeto_2biPOO.Pagamento"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projeto_2biPOO"
+        mc:Ignorable="d"
+        Title="Pagamento" Height="1080" Width="1920" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+    <Viewbox Stretch="Fill">
+        <Grid Width="1920" Height="1080">
+            <Rectangle HorizontalAlignment="Left" Height="1080" VerticalAlignment="Center" Width="639" Fill="#FF9D3535"/>
+            <Button Content="PIX" Click="BtnConfirmarPagamento_Click" HorizontalAlignment="Center" Margin="0,252,0,0" VerticalAlignment="Top" Width="450" Height="200" Background="#FF9D3535" Foreground="White" FontSize="40"/>
+            <Button Content="Cartão de Crédito" Click="BtnConfirmarPagamento_Click" HorizontalAlignment="Left" Margin="1329,252,0,0" VerticalAlignment="Top" Width="450" Height="200" Background="#FF9D3535" Foreground="White" FontSize="40"/>
+            <Button Content="&lt;" Click="BtnVoltar_Click" HorizontalAlignment="Left" Margin="1820,0,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF9D3535" Width="100" Height="100" FontSize="42"/>
+            <TextBlock HorizontalAlignment="Left" Margin="39,60,0,0" TextWrapping="Wrap" Text="Pagamento" VerticalAlignment="Top" FontSize="96" Foreground="White"/>
+            <Button Content="Cartão de Débito" Click="BtnConfirmarPagamento_Click" HorizontalAlignment="Center" Margin="0,597,0,0" VerticalAlignment="Top" Width="450" Height="200" Background="#FF9D3535" Foreground="White" FontSize="40"/>
+            <Button Content="Dinheiro" Click="BtnConfirmarPagamento_Click" HorizontalAlignment="Left" Margin="1329,597,0,0" VerticalAlignment="Top" Width="450" Height="200" Background="#FF9D3535" Foreground="White" FontSize="40"/>
+            <Rectangle HorizontalAlignment="Center" Height="80" Margin="0,898,0,0" Stroke="Black" VerticalAlignment="Top" Width="450" Fill="#FF9D3535"/>
+            <Label x:Name="lblTotal" Content="Total: R$ 0,00" HorizontalAlignment="Center" Margin="0,906,0,0" VerticalAlignment="Top" Foreground="White" FontSize="40"/>
+        </Grid>
+    </Viewbox>
+</Window>

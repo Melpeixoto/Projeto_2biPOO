@@ -1,0 +1,22 @@
+﻿<Window x:Class="Projeto_2biPOO.Prato"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projeto_2biPOO"
+        mc:Ignorable="d"
+        Title="Detalhes do Produto" Height="1080" Width="1920" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+    <Viewbox Stretch="Fill">
+        <Grid Width="1920" Height="1080">
+            <Rectangle HorizontalAlignment="Left" Height="1080" VerticalAlignment="Center" Width="639" Fill="#FF9D3535"/>
+            <Rectangle HorizontalAlignment="Left" Height="542" VerticalAlignment="Center" Width="1128" RadiusX="10" RadiusY="10" Fill="#FFE5E5E5" Margin="704,0,0,0"/>
+            <Button Content="Adicionar" Click="BtnAdicionar_Click" HorizontalAlignment="Left" Margin="1382,881,0,0" VerticalAlignment="Top" Width="450" Height="80" Background="#FF9D3535" Foreground="White" FontSize="40"/>
+            <Button Content="&lt;" Click="BtnVoltar_Click" HorizontalAlignment="Left" Margin="1820,0,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF9D3535" Width="100" Height="100" FontSize="42"/>
+            <Label x:Name="lblNome" Content="Nome" HorizontalAlignment="Left" Margin="704,90,0,0" VerticalAlignment="Top" FontSize="42" Foreground="#FF9D3535"/>
+            <TextBlock HorizontalAlignment="Left" Margin="39,60,0,0" TextWrapping="Wrap" Text="Prato" VerticalAlignment="Top" FontSize="96" Foreground="White"/>
+            <Image x:Name="imgProduto" Stretch="Uniform" HorizontalAlignment="Left" Height="476" Margin="738,297,0,0" VerticalAlignment="Top" Width="420"/>
+            <TextBlock x:Name="txtDescricao" HorizontalAlignment="Left" Margin="1216,320,0,0" Width="580" TextWrapping="Wrap" Text="Descrição" VerticalAlignment="Top" FontSize="24"/>
+            <Label x:Name="lblPreco" Content="Total: R$" HorizontalAlignment="Left" Margin="738,881,0,0" VerticalAlignment="Top" FontSize="36"/>
+        </Grid>
+    </Viewbox>
+</Window>
